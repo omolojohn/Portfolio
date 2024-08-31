@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>John Oyoo Omolo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        // JavaScript function to handle form submission
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Getting form data
+            const form = event.target;
+            const formData = new FormData(form);
+
+            // Send form data using Fetch API
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Message sent successfully!');
+                    form.reset(); // Clear the form fields after successful submission
+                } else {
+                    alert('Failed to send the message. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            });
+        }
+    </script>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">John Oyoo Omolo</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="icons">
+                <li>
+                    <a href="https://www.linkedin.com/in/john-omolo-916298133" class="icon brands fa-linkedin" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/omolojohn/omolojohn" class="icon brands fa-github" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <!-- About Section -->
+            <section>
+                <h2>Hello,</h2>
+                <p>Welcome to my portfolio.<br/>You will get to know more about me and the projects and professional experience I have in various fields. </p>
+            </section>
+            
+            <!-- About -->
+            <section>
+                <h2>About</h2>
+                <p>Dynamic professional with expertise in accounting, administration, and software development. Adept at managing business financials, supporting HR needs, and leveraging software skills to enhance operations. Committed to delivering quality work under tight deadlines through prioritization and effective communication.</p>
+            </section>
+
+            <!-- Objective -->
+            <section>
+                <h2>Objective</h2>
+                <p>To contribute to organizational success through diligent and honest work, while fostering a collaborative environment that drives short and long-term goals.</p>
+            </section>
+
+            <!-- Experience -->
+            <section>
+                <h2>Experience</h2>
+                <h3>Matrices Auto Tyres and Parts | Office Administrator</h3>
+                <p>August 2019 - December 2019 <br/>- Managed office operations including bookkeeping and petty cash management. <br/>- Provided administrative support to ensure efficient office operation.</p>
+                <h3>Artcraft Africa Talent Academy | Volunteer Administrator</h3>
+                <p>July 2018 - November 2018 <br/>- Coordinated HR activities, improving volunteer engagement by 20%. <br/>- Managed bookkeeping and supported talent coordination efforts.</p>
+            </section>
+
+            <!-- Skills -->
+            <section>
+                <h2>Skills</h2>
+                <ol>
+                    <li>Team building</li>
+                    <li>Problem-solving</li>
+                    <li>Decision-making</li>
+                    <li>Creativity and innovation</li>
+                </ol>
+            </section>
+
+            <!-- Education -->
+            <section>
+                <h2>Education</h2>
+                <h3>KCSE</h3>
+                <p>2014</p>
+                <p>- KNEC</p>
+                <h3>KCA University</h3>
+                <p>2017</p>
+                <p>- Accounting (KASNEB Certified)</p>
+                <h3>Moringa School</h3>
+                <p>2024 (February-August)</p>
+                <p>- Software Engineering</p>
+            </section>
+
+            <!-- Referees -->
+            <section>
+                <h2>Referees</h2>
+                <p>Available upon request.</p>
+            </section>
+
+            <!-- Projects -->
+            <section>
+                <header>
+                    <h2>Projects</h2>
+                </header>
+                <div class="projects">
+                    <div class="project-item">
+                        <h3>Random Quote Generator</h3>
+                        <p>A simple web app that generates random quotes. Built with JavaScript, HTML, and CSS.</p>
+                        <a href="https://github.com/omolojohn/Phase-1-project" target="_blank">View on Github</a>
+                        <a href="#" class="image main"><img src="images/pic.jpeg" alt="Screenshot of Random Quote Generator Project" /></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section class="split contact">
+                <section class="alt">
+                    <h3>Location</h3>
+                    <p>Nairobi,<br />Kenya</p>
+                </section>
+                <section id="contact">
+                    <h2>Contact Me</h2>
+                    <!-- Updated form with onsubmit event -->
+                    <form action="https://formspree.io/f/mblrwerg" method="POST" onsubmit="handleFormSubmit(event)">
+                        <div class="fields">
+                            <div class="field half">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" required />
+                            </div>
+                            <div class="field half">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" required />
+                            </div>
+                            <div class="field">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" rows="6" required></textarea>
+                            </div>
+                        </div>
+                        <ul class="actions">
+                            <li><input type="submit" value="Send Message" class="primary" /></li>
+                        </ul>
+                    </form>
+                </section>
+                <section>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+254718969947">+254 718 969 947</a></p>
+                </section>
+            </section>
+        </footer>
+    </div>
+</body>
+</html>
