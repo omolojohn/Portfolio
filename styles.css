@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background: #333;
+    background: #817d7d;
     color: white;
     padding: 20px;
     text-align: center;
@@ -102,7 +102,7 @@ header h1 {
 }
 
 footer {
-    background: #333;
+    background: #817d7d;
     color: white;
     padding: 15px;
     text-align: center;
@@ -125,7 +125,7 @@ footer a:hover {
 }
 
 .link {
-    color: blue;
+    color:#930d12;
 }
 
 @media (max-width: 768px) {
