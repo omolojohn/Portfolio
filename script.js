@@ -3,14 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let navLinks = document.querySelectorAll(".nav-link");
     let scrollTopBtn = document.getElementById("scrollTopBtn");
 
-    // Highlight active page in navigation
+
     navLinks.forEach(link => {
         if (link.getAttribute("href") === currentPage) {
             link.classList.add("active");
         }
     });
 
-    // Smooth scrolling for internal links (#id links)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
@@ -27,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Show/hide scroll-to-top button on scroll
+
     window.addEventListener("scroll", function () {
         if (window.scrollY > 300) {
             scrollTopBtn.style.display = "block";
@@ -36,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Scroll to top when button is clicked
+
     scrollTopBtn.addEventListener("click", function () {
         window.scrollTo({
             top: 0,
