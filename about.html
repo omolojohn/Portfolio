@@ -1,41 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About John Oyoo Omolo, Full Stack Developer & Accountant. Learn more about my background, skills, and experience.">
+    <meta name="keywords" content="John Oyoo Omolo, About, Developer, Accountant, Skills, Experience">
+    <meta name="author" content="John Oyoo Omolo">
     <title>About | John Oyoo Omolo</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: 'class' };
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s, transform 0.8s; }
+      .fade-in.visible { opacity: 1; transform: none; }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500">
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle" aria-label="Toggle dark mode" class="fixed top-6 right-6 z-50 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-2 rounded-full shadow hover:scale-110 transition-transform">
+      <span id="darkModeIcon">🌙</span>
+    </button>
+    <!-- Navbar -->
     <header>
-        <nav id="nav">
-            <ul>
-                <li><a href="about.html" class="nav-link active">About</a></li>
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
+        <nav id="navbar" class="sticky top-0 z-40 bg-white dark:bg-gray-900 shadow-md transition-shadow">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex-shrink-0 text-2xl font-bold text-blue-700 dark:text-blue-400">John Oyoo Omolo</div>
+                    <ul class="flex space-x-6">
+                        <li><a href="index.html" class="nav-link hover:text-blue-500 dark:hover:text-blue-300 transition">Home</a></li>
+                        <li><a href="about.html" class="nav-link text-blue-700 dark:text-blue-400 font-semibold hover:text-blue-500 dark:hover:text-blue-300 transition">About</a></li>
+                        <li><a href="projects.html" class="nav-link hover:text-blue-500 dark:hover:text-blue-300 transition">Projects</a></li>
+                        <li><a href="contact.html" class="nav-link hover:text-blue-500 dark:hover:text-blue-300 transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <h1 class="h1">About Me</h1>
 
-    <section id="sec">
-        <h2>Who Am I?</h2>
-        <p>
-            I am a passionate software developer and accountant with expertise in JavaScript, Python, and financial management.
-            I enjoy building scalable web applications and leveraging technology to enhance financial processes.
-        </p>
-        <p>
-            With experience in React, Flask, and QuickBooks, I specialize in creating efficient solutions that bridge the gap between software development and finance.
-        </p>
+    <!-- About Hero Section -->
+    <section class="fade-in flex flex-col items-center justify-center text-center py-16 bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900">
+        <img id="profilePhoto" alt="John Oyoo Omolo" class="w-32 h-32 rounded-full shadow-lg mb-6 border-4 border-blue-200 dark:border-blue-500">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-2">About Me</h1>
+        <p class="max-w-2xl text-gray-700 dark:text-gray-200 text-lg mb-6">I'm John Oyoo Omolo, a Full Stack Developer and Accountant with a unique blend of technical and financial expertise. My passion lies in building scalable web applications and ensuring financial accuracy for businesses. With a strong background in both technology and accounting, I bridge the gap between software solutions and business needs, delivering robust, user-friendly, and financially sound applications.</p>
     </section>
 
-    <footer>
-        <p>&copy; 2025 John Oyoo Omolo | 
-        <a href="https://github.com/omolojohn" target="_blank" rel="noopener noreferrer" class="link">GitHub</a> | 
-        <a href="https://www.linkedin.com/in/johnomolo/" target="_blank" rel="noopener noreferrer" class="link">LinkedIn</a>
-        </p>
-    </footer>
-    <button id="scrollTopBtn" title="Go to top">↑</button>
-    <script src="script.js"></script>
+    <!-- Experience/Highlights Section -->
+    <section class="fade-in max-w-4xl mx-auto py-12 px-4">
+        <h2 class="text-3xl font-bold mb-6 text-blue-700 dark:text-blue-400">Experience & Highlights</h2>
+        <ul class="space-y-4 text-gray-700 dark:text-gray-200">
+            <li class="flex items-start">
+                <span class="mt-1 mr-3 text-blue-700 dark:text-blue-400">&#8226;</span>
+                <span>Developed and maintained scalable web applications using JavaScript, React, and Python.</span>
+            </li>
+            <li class="flex items-start">
+                <span class="mt-1 mr-3 text-blue-700 dark:text-blue-400">&#8226;</span>
+                <span>Managed financial systems and provided accounting solutions for small and medium businesses.</span>
+            </li>
+            <li class="flex items-start">
+                <span class="mt-1 mr-3 text-blue-700 dark:text-blue-400">&#8226;</span>
+                <span>Collaborated with cross-functional teams to deliver projects on time and within budget.</span>
+            </li>
+            <li class="flex items-start">
+                <span class="mt-1 mr-3 text-blue-700 dark:text-blue-400">&#8226;</span>
+                <span>Continuously learning and adapting to new technologies and industry trends.</span>
+            </li>
+        </ul>
+    </section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="fade-in bg-blue-50 dark:bg-gray-800 py-12">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-blue-700 dark:text-blue-400">Skills</h2>
+            <div class="flex flex-wrap gap-4">
+                <span class="bg-white dark:bg-gray-900 border border-blue-200 dark:border-blue-500 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full font-medium shadow transition-transform hover:scale-105">JavaScript</span>
+                <span class="bg-white dark:bg-gray-900 border border-blue-200 dark:border-blue-500 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full font-medium shadow transition-transform hover:scale-105">TypeScript</span>
+                <span class="bg-white dark:bg-gray-900 border border-blue-200 dark:border-blue-500 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full font-medium shadow transition-transform hover:scale-105">React</span>
+                <span class="bg-white dark:bg-gray-900 border border-blue-200 dark:border-blue-500 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full font-medium shadow transition-transform hover:scale-105">Python</span>
+                <span class="bg-white dark:bg-gray-900 border border-blue-200 dark:border-blue-500 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full font-medium shadow transition-transform hover:scale-105">SQL</span>
+                <span class="bg-white dark:bg-gray-900 border border-blue-200 dark:border-blue-500 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full font-medium shadow transition-transform hover:scale-105">Accounting</span>
+                <span class="bg-white dark:bg-gray-900 border border-blue-200 dark:border-blue-500 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full font-medium shadow transition-transform hover:scale-105">Finance</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-900 border-t mt-12 py-6">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-600 dark:text-gray-300">&copy; 2025 John Oyoo Omolo</p>
+            <div class="flex space-x-4 mt-2 md:mt-0">
+                <a href="https://github.com/omolojohn" target="_blank" rel="noopener noreferrer" class="text-blue-700 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 transition" aria-label="GitHub">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.98.01 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.7.42.36.79 1.09.79 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/johnomolo/" target="_blank" rel="noopener noreferrer" class="text-blue-700 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 transition" aria-label="LinkedIn">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.88v1.36h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v5.59z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts for interactivity and dark mode -->
+    <script>
+        // Dark mode toggle logic
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const darkModeIcon = document.getElementById('darkModeIcon');
+        function setDarkMode(on) {
+          document.documentElement.classList.toggle('dark', on);
+          localStorage.setItem('darkMode', on ? '1' : '0');
+          darkModeIcon.textContent = on ? '☀️' : '🌙';
+        }
+        setDarkMode(localStorage.getItem('darkMode') === '1');
+        darkModeToggle.onclick = () => setDarkMode(!document.documentElement.classList.contains('dark'));
+
+        // Navbar shadow on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 10) {
+            navbar.classList.add('shadow-lg');
+          } else {
+            navbar.classList.remove('shadow-lg');
+          }
+        });
+
+        // Reveal animations for sections
+        function revealOnScroll() {
+          document.querySelectorAll('.fade-in').forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 60) {
+              el.classList.add('visible');
+            }
+          });
+        }
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('DOMContentLoaded', revealOnScroll);
+
+        // Profile photo multi-extension support
+        function setProfilePhoto(imgId) {
+          const exts = ["jpg", "jpeg", "png"];
+          const base = "assets/profile.";
+          const placeholder = "https://ui-avatars.com/api/?name=John+Oyoo+Omolo&background=0D8ABC&color=fff&size=128";
+          const img = document.getElementById(imgId);
+          let found = false;
+          let i = 0;
+          function tryNext() {
+            if (i >= exts.length) {
+              img.src = placeholder;
+              return;
+            }
+            const testSrc = base + exts[i];
+            const testImg = new window.Image();
+            testImg.onload = function() {
+              img.src = testSrc;
+              found = true;
+            };
+            testImg.onerror = function() {
+              i++;
+              tryNext();
+            };
+            testImg.src = testSrc;
+          }
+          tryNext();
+        }
+        setProfilePhoto("profilePhoto");
+    </script>
 </body>
 </html>
