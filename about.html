@@ -28,8 +28,8 @@
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500">
-    <!-- Dark Mode Toggle -->
-    <button id="darkModeToggle" aria-label="Toggle dark mode" class="fixed top-6 right-6 z-50 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-2 rounded-full shadow hover:scale-110 transition-transform">
+    <!-- Dark Mode Toggle (move lower on mobile) -->
+    <button id="darkModeToggle" aria-label="Toggle dark mode" class="fixed top-20 right-4 md:top-6 md:right-6 z-50 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-2 rounded-full shadow hover:scale-110 transition-transform">
       <span id="darkModeIcon">🌙</span>
     </button>
     <!-- Navbar -->
@@ -39,7 +39,7 @@
                 <div class="flex justify-between items-center h-16">
                     <div class="flex-shrink-0 text-2xl font-bold text-blue-700 dark:text-blue-400">John Oyoo Omolo</div>
                     <button id="menuButton" class="md:hidden p-2 rounded border border-gray-200 dark:border-gray-700" aria-label="Toggle menu" aria-expanded="false" aria-controls="menuLinks">☰</button>
-                    <ul id="menuLinks" class="hidden md:flex space-x-6">
+                    <ul id="menuLinks" class="hidden absolute left-0 right-0 top-16 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 md:static md:bg-transparent md:dark:bg-transparent md:border-0 md:flex md:space-x-6 z-40">
                         <li><a href="index.html" class="nav-link hover:text-blue-500 dark:hover:text-blue-300 transition">Home</a></li>
                         <li><a href="about.html" class="nav-link text-blue-700 dark:text-blue-400 font-semibold hover:text-blue-500 dark:hover:text-blue-300 transition">About</a></li>
                         <li><a href="projects.html" class="nav-link hover:text-blue-500 dark:hover:text-blue-300 transition">Projects</a></li>

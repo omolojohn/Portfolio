@@ -61,6 +61,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 menuLinks.classList.add('hidden');
             }
         });
+
+        // Close menu when a link is clicked (mobile)
+        menuLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768 && !menuLinks.classList.contains('hidden')) {
+                    menuLinks.classList.add('hidden');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
     }
 
     // Reveal animations for sections
