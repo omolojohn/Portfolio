@@ -67,6 +67,17 @@ I plan to enhance this portfolio with the following improvements:
     ✅ Integrate a contact form with backend email functionality
     ✅ Add more projects with detailed descriptions and live demos
 
+#### 🖼 Adding Your Profile Photo
+The site auto-loads your photo from `assets/profile.*` in this priority: `.webp`, `.jpg`, `.jpeg`, `.png`.
+
+Steps:
+1. Create the folder if missing: `assets/`
+2. Add your image as `assets/profile.webp` (preferred) or one of the other supported formats.
+3. Recommended: square image 512×512 or larger. Display size is 128×128.
+4. Keep file size under ~300 KB for fast loading.
+
+No code changes are required. `script.js` will pick the first available format; otherwise a placeholder avatar is used.
+
 #### 📬 Contact
 You can reach me through the following channels:
 

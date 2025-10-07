@@ -13,6 +13,32 @@
       // Enable Tailwind dark mode via class
       tailwind.config = { darkMode: 'class' };
     </script>
+    <link rel="canonical" href="https://omolojohn.co.ke/">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta property="og:title" content="John Oyoo Omolo — Full Stack Developer">
+    <meta property="og:description" content="I build reliable web apps and bring finance discipline to engineering.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://omolojohn.co.ke/">
+    <meta property="og:image" content="https://omolojohn.co.ke/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "John Oyoo Omolo",
+      "url": "https://omolojohn.co.ke/",
+      "sameAs": [
+        "https://github.com/omolojohn",
+        "https://www.linkedin.com/in/johnomolo/"
+      ],
+      "jobTitle": "Full Stack Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      }
+    }
+    </script>
     <style>
       html { scroll-behavior: smooth; }
       .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s, transform 0.8s; }
@@ -30,11 +56,13 @@
             <div class="max-w-6xl mx-auto px-4">
                 <div class="flex justify-between items-center h-16">
                     <div class="flex-shrink-0 text-2xl font-bold text-blue-700 dark:text-blue-400">John Oyoo Omolo</div>
-                    <ul class="flex space-x-6">
+                    <button id="menuButton" class="md:hidden p-2 rounded border border-gray-200 dark:border-gray-700" aria-label="Toggle menu" aria-expanded="false" aria-controls="menuLinks">☰</button>
+                    <ul id="menuLinks" class="hidden md:flex space-x-6">
                         <li><a href="index.html" class="nav-link text-blue-700 dark:text-blue-400 font-semibold hover:text-blue-500 dark:hover:text-blue-300 transition">Home</a></li>
                         <li><a href="about.html" class="nav-link hover:text-blue-500 dark:hover:text-blue-300 transition">About</a></li>
                         <li><a href="projects.html" class="nav-link hover:text-blue-500 dark:hover:text-blue-300 transition">Projects</a></li>
                         <li><a href="contact.html" class="nav-link hover:text-blue-500 dark:hover:text-blue-300 transition">Contact</a></li>
+                        <li><a href="assets/resume.html" target="_blank" rel="noopener" class="nav-link hover:text-blue-500 dark:hover:text-blue-300 transition">Resume</a></li>
                     </ul>
                 </div>
             </div>
@@ -42,73 +70,76 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="fade-in flex flex-col items-center justify-center text-center py-16 bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900">
-        <img id="profilePhoto" alt="John Oyoo Omolo" class="w-32 h-32 rounded-full shadow-lg mb-6 border-4 border-blue-200 dark:border-blue-500">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-2">Hello, I'm John Oyoo Omolo!</h1>
-        <p class="text-xl text-blue-700 dark:text-blue-400 font-semibold mb-4">Full Stack Developer & Accountant</p>
-        <p class="max-w-xl text-gray-600 dark:text-gray-300 mb-6">Passionate about technology, accounting, and finance. I specialize in building scalable web applications and managing financial systems with precision.</p>
-        <a href="#projects" class="inline-block bg-blue-700 dark:bg-blue-500 text-white dark:text-gray-900 px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-800 dark:hover:bg-blue-400 transition-transform transform hover:scale-105">View My Projects</a>
+    <section class="fade-in py-16 bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900">
+        <div class="max-w-4xl mx-auto px-4">
+          <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 md:p-10 text-center">
+            <img id="profilePhoto" alt="Portrait of John Oyoo Omolo" class="w-32 h-32 rounded-full shadow-lg mb-6 border-4 border-blue-200 dark:border-blue-500 mx-auto" width="128" height="128" decoding="async">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-2">Hello, I'm John Oyoo Omolo!</h1>
+            <p class="text-xl text-blue-700 dark:text-blue-400 font-semibold mb-4">Full-Stack Software Developer</p>
+            <p class="max-w-xl mx-auto text-gray-600 dark:text-gray-300 mb-6">I build reliable web apps and bring finance discipline to engineering. Focused on business impact, performance, and usability.</p>
+            <div class="flex gap-3 flex-wrap justify-center">
+              <a href="#projects" class="inline-block bg-blue-700 dark:bg-blue-500 text-white dark:text-gray-900 px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-800 dark:hover:bg-blue-400 transition-transform transform hover:scale-105">View Projects</a>
+              <a href="contact.html" class="inline-block bg-blue-700 dark:bg-blue-500 text-white dark:text-gray-900 px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-800 dark:hover:bg-blue-400 transition-transform transform hover:scale-105">Hire Me</a>
+            </div>
+          </div>
+        </div>
     </section>
     <!-- Skills Section -->
     <section id="skills" class="fade-in bg-blue-50 dark:bg-gray-800 py-12">
         <div class="max-w-4xl mx-auto px-4">
+          <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8">
             <h2 class="text-3xl font-bold mb-6 text-blue-700 dark:text-blue-400">Skills</h2>
             <div class="flex flex-wrap gap-4">
                 <span class="bg-white dark:bg-gray-900 border border-blue-200 dark:border-blue-500 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full font-medium shadow transition-transform hover:scale-105">JavaScript</span>
                 <span class="bg-white dark:bg-gray-900 border border-blue-200 dark:border-blue-500 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full font-medium shadow transition-transform hover:scale-105">TypeScript</span>
                 <span class="bg-white dark:bg-gray-900 border border-blue-200 dark:border-blue-500 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full font-medium shadow transition-transform hover:scale-105">React</span>
                 <span class="bg-white dark:bg-gray-900 border border-blue-200 dark:border-blue-500 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full font-medium shadow transition-transform hover:scale-105">Node.js</span>
-                <span class="bg-white dark:bg-gray-900 border border-blue-200 dark:border-blue-500 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full font-medium shadow transition-transform hover:scale-105">Express</span>
                 <span class="bg-white dark:bg-gray-900 border border-blue-200 dark:border-blue-500 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full font-medium shadow transition-transform hover:scale-105">Python</span>
+                <span class="bg-white dark:bg-gray-900 border border-blue-200 dark:border-blue-500 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full font-medium shadow transition-transform hover:scale-105">Flask</span>
                 <span class="bg-white dark:bg-gray-900 border border-blue-200 dark:border-blue-500 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full font-medium shadow transition-transform hover:scale-105">SQL</span>
-                <span class="bg-white dark:bg-gray-900 border border-blue-200 dark:border-blue-500 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full font-medium shadow transition-transform hover:scale-105">Accounting</span>
-                <span class="bg-white dark:bg-gray-900 border border-blue-200 dark:border-blue-500 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full font-medium shadow transition-transform hover:scale-105">Finance</span>
             </div>
+          </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="fade-in max-w-6xl mx-auto py-12 px-4">
-        <h2 class="text-3xl font-bold mb-6 text-blue-700 dark:text-blue-400">Projects</h2>
-        <div class="grid md:grid-cols-3 gap-8">
+    <!-- Featured Projects Section -->
+    <section id="projects" class="fade-in py-12">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-400">Featured Projects</h2>
+              <a href="projects.html" class="text-blue-700 dark:text-blue-400 hover:underline font-medium">View all projects →</a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
             <!-- Project Card Example -->
-            <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 flex flex-col transition-transform hover:scale-105">
-                <h3 class="text-xl font-semibold mb-2">Promodo Timer</h3>
-                <p>A Tkinter-based Pomodoro Timer built in Python, deployed on Render.</p>
+            <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 flex flex-col transition-transform hover:scale-105 min-h-[260px]">
+                <h3 class="text-xl font-semibold mb-2">Pomodoro Timer</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-3">Built a focused productivity timer using Python and Tkinter; packaged for deployment with a Procfile and hosted on Render.</p>
                   <div class="flex flex-wrap gap-2 mb-4">
                       <span class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded text-xs font-medium">Python</span>
-                      <span class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded text-xs font-medium">Procfile</span>
+                    <span class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded text-xs font-medium">Tkinter</span>
+                    <span class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded text-xs font-medium">Render</span>
                   </div>
                   <div class="mt-auto flex space-x-4">
                       <a href="https://github.com/omolojohn/Promodo" class="text-blue-700 dark:text-blue-400 hover:underline font-medium">GitHub Repo for the Project</a>
                   </div>
               </div>
-              <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 flex flex-col transition-transform hover:scale-105">
-                  <h3 class="text-xl font-semibold mb-2">Password Manager</h3>
-                  <p class="text-gray-600 dark:text-gray-300 mb-4">A brief description of the project goes here. Highlight the tech stack and your role.</p>
-                  <div class="flex flex-wrap gap-2 mb-4">
-                      <span class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded text-xs font-medium">Python</span>
-                  </div>
-                  <div class="mt-auto flex space-x-4">
-                    <a href="#" class="text-blue-700 dark:text-blue-400 hover:underline font-medium">GitHub Repo to the Project</a>
-                  </div>
-                      
-              </div>
-              <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 flex flex-col transition-transform hover:scale-105">
+              <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 flex flex-col transition-transform hover:scale-105 min-h-[260px]">
                   <h3 class="text-xl font-semibold mb-2">Blog Website</h3>
-                  <p class="text-gray-600 dark:text-gray-300 mb-4">A blog website built with Python, Procfile, CSS, HTML and PostgreSQL</p>
+                  <p class="text-gray-600 dark:text-gray-300 mb-4">A blog website built with Python, CSS, HTML and PostgreSQL</p>
                   <div class="flex flex-wrap gap-2 mb-4">
                       <span class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded text-xs font-medium">Python</span>
                       <span class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded text-xs font-medium">HTML</span>
-                      <span class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded text-xs font-medium">Procfile</span>
                       <span class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded text-xs font-medium">CSS</span>
                       <span class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-1 rounded text-xs font-medium">PostgreSQL</span>
                   </div>
                   <div class="mt-auto flex space-x-4">
                       <a href="https://blogy.omolojohn.co.ke/" class="text-blue-700 dark:text-blue-400 hover:underline font-medium">Live Demo</a>
-                      <a href="https://github.com/omolojohn/Blogy" class="text-blue-700 dark:text-blue-400 hover:underline font-medium">GitHub Repo for the Project</a>
+                      <a href="https://github.com/omolojohn/Blogy" class="text-blue-700 dark:text-blue-400 hover:underline font-medium">GitHub Repo</a>
                   </div>
               </div>
+            </div>
+          </div>
         </div>
     </section>
     <!-- Footer -->
@@ -128,95 +159,6 @@
 
     <!-- Scroll to Top Button -->
     <button id="scrollTopBtn" title="Go to top" class="fixed bottom-6 right-6 bg-blue-700 dark:bg-blue-500 text-white dark:text-gray-900 p-3 rounded-full shadow-lg hover:bg-blue-800 dark:hover:bg-blue-400 transition focus:outline-none focus:ring-2 focus:ring-blue-400" aria-label="Scroll to top" style="display:none;">↑</button>
-    <script>
-        // Dark mode toggle logic
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const darkModeIcon = document.getElementById('darkModeIcon');
-        function setDarkMode(on) {
-          document.documentElement.classList.toggle('dark', on);
-          localStorage.setItem('darkMode', on ? '1' : '0');
-          darkModeIcon.textContent = on ? '☀️' : '🌙';
-        }
-        // On load, set dark mode from localStorage
-        setDarkMode(localStorage.getItem('darkMode') === '1');
-        darkModeToggle.onclick = () => setDarkMode(!document.documentElement.classList.contains('dark'));
-
-        // Navbar shadow on scroll
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-          if (window.scrollY > 10) {
-            navbar.classList.add('shadow-lg');
-          } else {
-            navbar.classList.remove('shadow-lg');
-          }
-        });
-
-        // Scroll to top button logic
-        const scrollTopBtn = document.getElementById('scrollTopBtn');
-        window.onscroll = function() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                scrollTopBtn.style.display = 'block';
-            } else {
-                scrollTopBtn.style.display = 'none';
-            }
-        };
-        scrollTopBtn.onclick = function() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        };
-
-        // Reveal animations for sections
-        function revealOnScroll() {
-          document.querySelectorAll('.fade-in').forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 60) {
-              el.classList.add('visible');
-            }
-          });
-        }
-        window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('DOMContentLoaded', revealOnScroll);
-
-        // Contact form feedback (mock)
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-          contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const feedback = document.getElementById('formFeedback');
-            feedback.textContent = 'Thank you for your message! (This is a demo.)';
-            feedback.className = 'block mt-2 text-green-600 dark:text-green-400 text-center';
-            contactForm.reset();
-          });
-        }
-
-        // Profile photo multi-extension support
-        function setProfilePhoto(imgId) {
-          const exts = ["jpg", "jpeg", "png"];
-          const base = "assets/profile.";
-          const placeholder = "https://ui-avatars.com/api/?name=John+Oyoo+Omolo&background=0D8ABC&color=fff&size=128";
-          const img = document.getElementById(imgId);
-          let found = false;
-          let i = 0;
-          function tryNext() {
-            if (i >= exts.length) {
-              img.src = placeholder;
-              return;
-            }
-            const testSrc = base + exts[i];
-            const testImg = new window.Image();
-            testImg.onload = function() {
-              img.src = testSrc;
-              found = true;
-            };
-            testImg.onerror = function() {
-              i++;
-              tryNext();
-            };
-            testImg.src = testSrc;
-          }
-          tryNext();
-        }
-        setProfilePhoto("profilePhoto");
-        setProfilePhoto("profilePhotoAbout");
-    </script>
+    <script src="/script.js" defer></script>
 </body>
 </html>

@@ -12,6 +12,15 @@
     <script>
       tailwind.config = { darkMode: 'class' };
     </script>
+    <link rel="canonical" href="https://omolojohn.co.ke/contact">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta property="og:title" content="Contact — John Oyoo Omolo">
+    <meta property="og:description" content="Get in touch via email, LinkedIn, GitHub, or WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://omolojohn.co.ke/contact">
+    <meta property="og:image" content="https://omolojohn.co.ke/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <style>
       html { scroll-behavior: smooth; }
       .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s, transform 0.8s; }
@@ -29,14 +38,16 @@
             <div class="max-w-6xl mx-auto px-4">
                 <div class="flex justify-between items-center h-16">
                     <div class="flex items-center space-x-2">
-                        <img id="profilePhotoNavbar" alt="John Oyoo Omolo" class="w-8 h-8 rounded-full border-2 border-blue-200 dark:border-blue-500">
+                        <img id="profilePhotoNavbar" alt="Portrait of John Oyoo Omolo" class="w-8 h-8 rounded-full border-2 border-blue-200 dark:border-blue-500" width="32" height="32" decoding="async" loading="lazy">
                         <span class="text-2xl font-bold text-blue-700 dark:text-blue-400">John Oyoo Omolo</span>
                     </div>
-                    <ul class="flex space-x-6">
+                    <button id="menuButton" class="md:hidden p-2 rounded border border-gray-200 dark:border-gray-700" aria-label="Toggle menu" aria-expanded="false" aria-controls="menuLinks">☰</button>
+                    <ul id="menuLinks" class="hidden md:flex space-x-6">
                         <li><a href="index.html" class="nav-link hover:text-blue-500 dark:hover:text-blue-300 transition">Home</a></li>
                         <li><a href="about.html" class="nav-link hover:text-blue-500 dark:hover:text-blue-300 transition">About</a></li>
                         <li><a href="projects.html" class="nav-link hover:text-blue-500 dark:hover:text-blue-300 transition">Projects</a></li>
                         <li><a href="contact.html" class="nav-link text-blue-700 dark:text-blue-400 font-semibold hover:text-blue-500 dark:hover:text-blue-300 transition">Contact</a></li>
+                        <li><a href="assets/resume.html" target="_blank" rel="noopener" class="nav-link hover:text-blue-500 dark:hover:text-blue-300 transition">Resume</a></li>
                     </ul>
                 </div>
             </div>
@@ -44,16 +55,24 @@
     </header>
 
     <!-- Contact Hero Section -->
-    <section class="fade-in flex flex-col items-center justify-center text-center py-16 bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-2">Contact Me</h1>
-        <p class="max-w-2xl text-gray-700 dark:text-gray-200 text-lg mb-6">I'd love to hear from you! Whether you have a question, want to collaborate, feel free to reach out via:</p>
-       
+    <section class="fade-in py-16 bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900">
+        <div class="max-w-4xl mx-auto px-4">
+          <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 md:p-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-2">Contact Me</h1>
+            <p class="max-w-2xl mx-auto text-gray-700 dark:text-gray-200 text-lg mb-6">I'd love to hear from you! Whether you have a question, want to collaborate, feel free to reach out via:</p>
             <div class="flex flex-col items-center space-y-2">
                 <a href="mailto:omolojohn@gmail.com" class="text-blue-700 dark:text-blue-400 hover:underline font-medium">omolojohn@gmail.com</a>
                 <a href="https://github.com/omolojohn" target="_blank" rel="noopener noreferrer" class="text-blue-700 dark:text-blue-400 hover:underline font-medium">GitHub</a>
                 <a href="https://www.linkedin.com/in/johnomolo/" target="_blank" rel="noopener noreferrer" class="text-blue-700 dark:text-blue-400 hover:underline font-medium">LinkedIn</a>
+                <a href="https://wa.me/254718969947?text=Reach%20me%20out%20via%20whatsapp" target="_blank" rel="noopener noreferrer" class="text-blue-700 dark:text-blue-400 hover:underline font-medium inline-flex items-center gap-2" aria-label="WhatsApp">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.149-.672.15-.198.297-.768.967-.94 1.166-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.477-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.297.298-.496.099-.198.05-.372-.025-.521-.075-.149-.672-1.62-.921-2.217-.242-.58-.487-.5-.672-.51l-.572-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.71.306 1.264.489 1.696.626.712.227 1.36.195 1.873.118.571-.085 1.758-.718 2.006-1.412.248-.694.248-1.289.173-1.412-.074-.124-.272-.198-.57-.347m-5.421 6.403h-.004a8.948 8.948 0 01-4.563-1.25l-.327-.194-3.389.889.906-3.3-.213-.338a8.94 8.94 0 01-1.37-4.78c.002-4.948 4.026-8.967 8.975-8.967 2.397.001 4.649.935 6.34 2.626a8.908 8.908 0 012.632 6.34c-.003 4.948-4.027 8.967-8.987 8.967M20.52 3.484A11.887 11.887 0 0012.051 0C5.495 0 .238 5.257.235 11.807c0 2.082.547 4.116 1.588 5.91L0 24l6.418-1.682a11.78 11.78 0 005.66 1.442h.005c6.556 0 11.813-5.257 11.816-11.807a11.728 11.728 0 00-3.379-8.469"/>
+                  </svg>
+                  <span>WhatsApp</span>
+                </a>
             </div>
-    
+          </div>
+        </div>
       </section>
 
     <!-- Footer -->
@@ -73,92 +92,6 @@
     <!-- Scroll to Top Button -->
     <button id="scrollTopBtn" title="Go to top" class="fixed bottom-6 right-6 bg-blue-700 dark:bg-blue-500 text-white dark:text-gray-900 p-3 rounded-full shadow-lg hover:bg-blue-800 dark:hover:bg-blue-400 transition focus:outline-none focus:ring-2 focus:ring-blue-400" aria-label="Scroll to top" style="display:none;">↑</button>
     <!-- Scripts for interactivity and dark mode -->
-    <script>
-        // Dark mode toggle logic
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const darkModeIcon = document.getElementById('darkModeIcon');
-        function setDarkMode(on) {
-          document.documentElement.classList.toggle('dark', on);
-          localStorage.setItem('darkMode', on ? '1' : '0');
-          darkModeIcon.textContent = on ? '☀️' : '🌙';
-        }
-        setDarkMode(localStorage.getItem('darkMode') === '1');
-        darkModeToggle.onclick = () => setDarkMode(!document.documentElement.classList.contains('dark'));
-
-        // Navbar shadow on scroll
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-          if (window.scrollY > 10) {
-            navbar.classList.add('shadow-lg');
-          } else {
-            navbar.classList.remove('shadow-lg');
-          }
-        });
-
-        // Scroll to top button logic
-        const scrollTopBtn = document.getElementById('scrollTopBtn');
-        window.onscroll = function() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                scrollTopBtn.style.display = 'block';
-            } else {
-                scrollTopBtn.style.display = 'none';
-            }
-        };
-        scrollTopBtn.onclick = function() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        };
-
-        // Reveal animations for sections
-        function revealOnScroll() {
-          document.querySelectorAll('.fade-in').forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 60) {
-              el.classList.add('visible');
-            }
-          });
-        }
-        window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('DOMContentLoaded', revealOnScroll);
-
-        // Contact form feedback (mock)
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-          contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const feedback = document.getElementById('formFeedback');
-            feedback.textContent = 'Thank you for your message! (This is a demo.)';
-            feedback.className = 'block mt-2 text-green-600 dark:text-green-400 text-center';
-            contactForm.reset();
-          });
-        }
-        // Profile photo multi-extension support
-        function setProfilePhoto(imgId) {
-          const exts = ["jpg", "jpeg", "png"];
-          const base = "assets/profile.";
-          const placeholder = "https://ui-avatars.com/api/?name=John+Oyoo+Omolo&background=0D8ABC&color=fff&size=128";
-          const img = document.getElementById(imgId);
-          let found = false;
-          let i = 0;
-          function tryNext() {
-            if (i >= exts.length) {
-              img.src = placeholder;
-              return;
-            }
-            const testSrc = base + exts[i];
-            const testImg = new window.Image();
-            testImg.onload = function() {
-              img.src = testSrc;
-              found = true;
-            };
-            testImg.onerror = function() {
-              i++;
-              tryNext();
-            };
-            testImg.src = testSrc;
-          }
-          tryNext();
-        }
-        setProfilePhoto("profilePhotoNavbar");
-    </script>
+    <script src="/script.js" defer></script>
 </body>
 </html>
