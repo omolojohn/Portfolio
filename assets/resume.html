@@ -19,28 +19,30 @@
 <body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
   <main class="max-w-3xl mx-auto p-6">
     <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8">
-      <div class="flex items-center justify-between">
-        <div>
-          <h1 class="text-3xl font-extrabold">John Oyoo Omolo</h1>
-          <p class="text-gray-600 dark:text-gray-300">Full‑Stack Developer</p>
+      <header>
+        <div class="flex items-start justify-between">
+          <div>
+            <h1 class="text-3xl font-extrabold">John Oyoo Omolo</h1>
+            <p class="text-gray-600 dark:text-gray-300">Full‑Stack Developer</p>
+          </div>
+          <div class="text-sm text-right space-y-1">
+            <p><a href="https://www.linkedin.com/in/johnomolo/" class="text-blue-700 dark:text-blue-400 hover:underline" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/omolojohn" class="text-blue-700 dark:text-blue-400 hover:underline" target="_blank" rel="noopener">GitHub</a> · <a href="/index.html" class="text-blue-700 dark:text-blue-400 hover:underline">Portfolio</a></p>
+            <p><a href="mailto:omolojohn@gmail.com" class="text-blue-700 dark:text-blue-400 hover:underline">omolojohn@gmail.com</a> · <span class="text-gray-600 dark:text-gray-300">+254 718 969 947</span></p>
+          </div>
         </div>
-        <div class="text-sm text-right">
-          <p><a href="mailto:omolojohn@gmail.com" class="text-blue-700 dark:text-blue-400 hover:underline">omolojohn@gmail.com</a></p>
-          <p class="text-gray-600 dark:text-gray-300">+254 718 969 947</p>
-          <p><a href="https://github.com/omolojohn" class="text-blue-700 dark:text-blue-400 hover:underline" target="_blank" rel="noopener">github.com/omolojohn</a></p>
-          <p><a href="https://www.linkedin.com/in/johnomolo/" class="text-blue-700 dark:text-blue-400 hover:underline" target="_blank" rel="noopener">linkedin.com/in/johnomolo/</a></p>
-          <p><a href="/index.html" class="text-blue-700 dark:text-blue-400 hover:underline">Portfolio</a></p>
-        </div>
-      </div>
+        <hr class="my-4 border-gray-200 dark:border-gray-800">
+      </header>
 
-      <div class="no-print mt-4">
-        <button onclick="window.print()" class="bg-blue-700 text-white px-4 py-2 rounded shadow hover:bg-blue-800">Print to PDF</button>
+      <div class="no-print mt-4 flex gap-3">
+        <a href="/assets/resume.pdf" download class="bg-blue-700 text-white px-4 py-2 rounded shadow hover:bg-blue-800">Download PDF</a>
+        <a href="/assets/resume.pdf" target="_blank" rel="noopener" class="bg-white dark:bg-gray-800 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-600 px-4 py-2 rounded shadow hover:bg-blue-50 dark:hover:bg-gray-700">Open PDF</a>
       </div>
 
       <section class="mt-6">
-        <h2 class="text-xl font-bold text-blue-700 dark:text-blue-400">Summary</h2>
+        <h2 class="text-xl font-bold text-blue-700 dark:text-blue-400">Profile</h2>
         <p class="mt-2 text-gray-700 dark:text-gray-200">Full‑stack developer focused on building reliable, usable web applications with modern JavaScript/TypeScript, React, Node.js, and Python. Comfortable across the stack from UI to databases, with a pragmatic approach to performance, DX, and shipping features. Background in finance informs strong product sense for fintech and data accuracy.</p>
       </section>
+      <hr class="my-4 border-gray-200 dark:border-gray-800">
 
       <section class="mt-6">
         <h2 class="text-xl font-bold text-blue-700 dark:text-blue-400">Core Skills</h2>
@@ -57,6 +59,22 @@
           </ul>
         </div>
       </section>
+      <hr class="my-4 border-gray-200 dark:border-gray-800">
+
+      <section class="mt-6">
+        <h2 class="text-xl font-bold text-blue-700 dark:text-blue-400">Experience</h2>
+        <div class="mt-2 text-gray-700 dark:text-gray-200">
+          <h3 class="font-semibold">Software Projects & Freelance — Full‑Stack Developer</h3>
+          <ul class="list-disc list-inside">
+            <li>Delivered small web apps end‑to‑end: planning, UI, backend, deployment.</li>
+            <li>Built REST endpoints, form handling, simple auth, and third‑party integrations.</li>
+            <li>Used component‑driven development with React and Tailwind for accessible UIs.</li>
+            <li>Version control and code reviews on GitHub; iterative release cadence.</li>
+          </ul>
+          <p class="mt-2 text-sm text-gray-500">Fintech note: finance background strengthens data validation, reconciliation, and auditability.</p>
+        </div>
+      </section>
+      <hr class="my-4 border-gray-200 dark:border-gray-800">
 
       <section class="mt-6">
         <h2 class="text-xl font-bold text-blue-700 dark:text-blue-400">Projects</h2>
@@ -93,20 +111,6 @@
             </ul>
             <p class="text-sm mt-1"><a class="text-blue-700 dark:text-blue-400 hover:underline" href="https://blogy.omolojohn.co.ke/" target="_blank" rel="noopener">Live</a> · <a class="text-blue-700 dark:text-blue-400 hover:underline" href="https://github.com/omolojohn/Blogy" target="_blank" rel="noopener">GitHub</a></p>
           </div>
-        </div>
-      </section>
-
-      <section class="mt-6">
-        <h2 class="text-xl font-bold text-blue-700 dark:text-blue-400">Experience</h2>
-        <div class="mt-2 text-gray-700 dark:text-gray-200">
-          <h3 class="font-semibold">Software Projects & Freelance — Full‑Stack Developer</h3>
-          <ul class="list-disc list-inside">
-            <li>Delivered small web apps end‑to‑end: planning, UI, backend, deployment.</li>
-            <li>Built REST endpoints, form handling, simple auth, and third‑party integrations.</li>
-            <li>Used component‑driven development with React and Tailwind for accessible UIs.</li>
-            <li>Version control and code reviews on GitHub; iterative release cadence.</li>
-          </ul>
-          <p class="mt-2 text-sm text-gray-500">Fintech note: finance background strengthens data validation, reconciliation, and auditability.</p>
         </div>
       </section>
 
