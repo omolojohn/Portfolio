@@ -106,7 +106,7 @@ Alternatively, you can use the Vercel Dashboard to connect your GitHub repositor
 This portfolio serves as a showcase of my professional journey. I am open to collaborations, job opportunities, and networking. Feel free to connect with me! 🚀
 
 #### 🔗 Useful Links
-🌍 [Live Portfolio](https://portfolio-delta-seven-71.vercel.app)
+🌍 [Live Portfolio](www.omolojohn.co.ke)
 
 📂 [GitHub Repository](https://github.com/omolojohn/Portfolio)
 
